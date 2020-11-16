@@ -1,10 +1,6 @@
 <template>
   <Header />
   <Navbar />
-  <!-- <div id="nav">
-    <router-link to="/">Page1</router-link> |
-    <router-link to="/about">Page2</router-link>
-  </div> -->
   <router-view />
 </template>
 
@@ -13,7 +9,6 @@ import Header from "./components/Header.vue";
 import Navbar from "./components/NavBar.vue";
 
 export default {
-  // name: "Home",
   components: {
     Header,
     Navbar,
@@ -21,25 +16,25 @@ export default {
 };
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<style  lang="sass">
+*
+  margin: 0
+  padding: 0
+#app
+  font-family: Avenir, Helvetica, Arial, sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  text-align: center
+  color: #2c3e50
+  margin-top: 0 !important
+  height: 100vh
 
-#nav {
-  padding: 30px;
-}
+#nav
+  padding: 30px
+  & a
+    font-weight: bold
+    color: #2c3e50
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+  & a.router-link-exact-active
+    color: #42b983
 </style>

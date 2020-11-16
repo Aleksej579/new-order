@@ -1,10 +1,14 @@
 <template>
   <div id="navbar">
-    <p>Navbar component</p>
-    <div id="nav">
-      <router-link to="/">Page1</router-link> |
-      <router-link to="/about">Page2</router-link>
-    </div>
+    <div id="logo"></div>
+    <ul id="nav">
+      <li>
+        <router-link to="/">Orders</router-link>
+      </li>
+      <li>
+        <router-link to="/products">Products</router-link>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -17,4 +21,25 @@ export default {
   },
 };
 </script>
+
+<style lang="sass">
+#navbar
+  height: calc(100% - 80px)
+  width: 300px
+  box-shadow: 0 10px 10px rgba(0,0,0,0.5)
+  float: left
+  padding-top: 50px
+#logo
+  height: 100px
+  width: 100px
+  border-radius: 50px
+  margin: 0 auto
+  background-image: url('../assets/d.jpg')
+  background-size: cover
+#nav
+  li
+    list-style-type: none
+    margin: 15px 0
+</style>
+
 
