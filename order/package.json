@@ -21,5 +21,17 @@
     "vite": "^1.0.0-rc.8",
     "vue-loader": "^15.9.5",
     "vue-template-compiler": "^2.6.12"
-  }
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aleksej579/new-order.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aleksej579/new-order/issues"
+  },
+  "homepage": "https://github.com/Aleksej579/new-order#readme",
+  "description": ""
 }
