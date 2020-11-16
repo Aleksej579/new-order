@@ -1,0 +1,22 @@
+{
+  "name": "order",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite"
+  },
+  "dependencies": {
+    "es6-promise": "^4.2.8",
+    "vue": "^3.0.2",
+    "vue-router": "^4.0.0-rc.3",
+    "vuex": "^4.0.0-rc.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-router": "^4.5.8",
+    "@vue/cli-service": "^4.5.8",
+    "@vue/compiler-sfc": "^3.0.2",
+    "vite": "^1.0.0-rc.8",
+    "vue-loader": "^15.9.5",
+    "vue-template-compiler": "^2.6.12"
+  }
+}
