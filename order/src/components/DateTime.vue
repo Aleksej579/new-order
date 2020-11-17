@@ -52,14 +52,16 @@ export default {
 
 <style lang="sass">
 #datetime
-    width: max-content
-    height: 100%
-    display: flex
-    flex-direction: column
-    align-items: baseline
-    justify-content: center
-    float: right
-    margin-right: 80px
-    .day
-        text-transform: capitalize
+  width: max-content
+  height: 100%
+  display: flex
+  flex-direction: column
+  align-items: baseline
+  justify-content: center
+  float: right
+  margin-right: 80px
+  .day
+    text-transform: capitalize
+  i
+    margin-left: 10px
 </style>

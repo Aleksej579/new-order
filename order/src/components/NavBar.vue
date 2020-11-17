@@ -25,7 +25,7 @@ export default {
 <style lang="sass">
 #navbar
   height: calc(100% - 80px)
-  width: 300px
+  width: 250px
   box-shadow: 0 10px 10px rgba(0,0,0,0.5)
   float: left
   padding-top: 50px
