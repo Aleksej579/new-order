@@ -1,10 +1,14 @@
 <template>
   <div id="wrapper-orders">
-    <el-button @click="visible = true">Button</el-button>
-    <el-dialog v-model="visible" title="Hello world">
-      <p>Try Element</p>
-    </el-dialog>
-    <span v-for="item in orders" :key="item" class="item-order">
+    <el-card
+      class="el-card-order"
+      shadow="hover"
+      v-for="item in orders"
+      :key="item"
+    >
+      <p>
+        {{ item.id }}
+      </p>
       {{ item.description }}
       <i class="bx bx-menu"></i>
       <div class="wrapper-time_date">
@@ -19,18 +23,19 @@
       <i
         v-bind:class="[seen ? 'bx bxs-chevron-left' : 'bx bxs-chevron-right']"
         style="color: #8bc34a"
-        @click="shw"
+        @click="targetCard"
       ></i>
-      <div v-if="seen">
-        <span v-for="prod in item.getProducts" :key="prod" class="item-order">
+      <!-- <el-button type="success" @click="targetCard">Success</el-button> -->
+      <el-dialog v-model="seen">
+        <span v-for="prod in item.getProducts" :key="prod">
           {{ prod.title }}
-          <!-- <span class="wrapper-price">
+          <span class="wrapper-price">
             <span> {{ prod.price[0].value }} $ </span>
             <span> {{ prod.price[1].value }} UAH </span>
-          </span> -->
+          </span>
         </span>
-      </div>
-    </span>
+      </el-dialog>
+    </el-card>
   </div>
 </template>
 
@@ -42,12 +47,28 @@ export default {
       orders: orders,
       products: products,
       seen: false,
-      visible: false,
     };
   },
   methods: {
     shw() {
       this.seen = !this.seen;
+    },
+    targetCard() {
+      let rez;
+      let btn_;
+      document.body.onclick = function (event) {
+        const t = event.target || event.srcElement;
+        rez =
+          t.parentNode.firstChild.nextElementSibling.childNodes[0].nodeValue;
+        btn_ =
+          t.nextElementSibling.parentNode.firstChild.nextElementSibling
+            .childNodes[0].nodeValue;
+      };
+      if (rez == btn_) {
+        this.seen = !this.seen;
+      } else {
+        console.log(false);
+      }
     },
   },
 };
@@ -55,21 +76,19 @@ export default {
 
 <style lang="sass">
 #wrapper-orders
-  width: 100%
   margin-left: 250px
   padding-left: 20px
-  .item-order
-    display: flex
-    flex-direction: row
-    align-items: center
-    margin-bottom: 5px
+  .el-card-order
     width: max-content
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5)
-    height: 100px
-
-    i
-      margin-left: 50px
-      .wrapper-time_date
+    margin-bottom: 10px
+    .el-card__body
+      display: flex
+      flex-direction: row
+      align-items: center
+      i
         margin-left: 50px
+        .wrapper-time_date
+          margin-left: 50px
 </style>
+
 
