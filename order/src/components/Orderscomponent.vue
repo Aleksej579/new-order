@@ -1,5 +1,9 @@
 <template>
   <div id="wrapper-orders">
+    <el-button @click="visible = true">Button</el-button>
+    <el-dialog v-model="visible" title="Hello world">
+      <p>Try Element</p>
+    </el-dialog>
     <span v-for="item in orders" :key="item" class="item-order">
       {{ item.description }}
       <i class="bx bx-menu"></i>
@@ -38,6 +42,7 @@ export default {
       orders: orders,
       products: products,
       seen: false,
+      visible: false,
     };
   },
   methods: {

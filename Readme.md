@@ -8,6 +8,8 @@
 ### npm install -D vue-loader vue-template-compiler
 # add SASS
 ### npm install -D sass-loader sass
+# add style css element+
+### npm install element-plus --save
 
 ---
 # npm init vite-app order
