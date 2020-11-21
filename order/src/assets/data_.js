@@ -26,7 +26,6 @@ const orders = [
 ];
 const products = [
     {
-        id: 1,
         isNew: true,
         photo: './src/assets/monitor1.png',
         title: 'Monitors Samsung',
@@ -43,7 +42,6 @@ const products = [
         ],
     },
     {
-        id: 2,
         isNew: false,
         photo: './src/assets/monitor2.png',
         title: 'Monitors LG',
@@ -60,7 +58,6 @@ const products = [
         ],
     },
     {
-        id: 3,
         isNew: false,
         photo: './src/assets/monitor2.png',
         title: 'Monitors Lenovo',

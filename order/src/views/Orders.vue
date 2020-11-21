@@ -1,7 +1,6 @@
 <template>
   <div class="wrapper_order">
-    <h1>Page orders all</h1>
-    <Search />
+    <!-- <Search /> -->
     <Orderscomponent />
   </div>
 </template>

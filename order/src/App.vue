@@ -20,6 +20,10 @@ export default {
 *
   margin: 0
   padding: 0
+html
+  background-color: #f0f3f5
+.el-popup-parent--hidden
+  overflow: auto
 #app
   font-family: Avenir, Helvetica, Arial, sans-serif
   -webkit-font-smoothing: antialiased
@@ -27,7 +31,9 @@ export default {
   text-align: center
   color: #2c3e50
   margin-top: 0 !important
-  height: 100vh
+
+  position: relative
+  min-height: 100vh
 
 #nav
   padding: 30px

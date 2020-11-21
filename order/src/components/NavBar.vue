@@ -24,11 +24,13 @@ export default {
 
 <style lang="sass">
 #navbar
-  height: calc(100% - 80px)
   width: 250px
   box-shadow: 0 10px 10px rgba(0,0,0,0.5)
-  float: left
   padding-top: 50px
+  position: absolute
+  top: 80px
+  bottom: 0
+  background-color: white
 #logo
   height: 100px
   width: 100px
