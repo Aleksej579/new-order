@@ -1,6 +1,5 @@
-import ElementPlus from 'element-plus'
-import 'element-plus/lib/theme-chalk/index.css'
+import { Button } from 'element-plus'
 
 export default (app) => {
-  app.use(ElementPlus)
+  app.use(Button)
 }
