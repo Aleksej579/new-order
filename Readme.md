@@ -33,3 +33,5 @@ add .gitignore + text
 npm install --save-dev @vue/cli-service
 vue add router
 npm run dev
+npm install --save element-plus
+npx vue-cli-service build 
